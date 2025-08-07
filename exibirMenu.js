@@ -1,7 +1,7 @@
 const rl = require('./rl');
 const contatos = require('./contatos');
 const adicionarContato = require('./adicionarContato');
-const listarContatos = require('./listarContatos')
+const listarContatos = require('./listarContatos');
 const atualizarContato = require('./atualizarContato');
 const removerContato = require('./removerContato');
 
@@ -24,7 +24,7 @@ function exibirMenu() {
         listarContatos(exibirMenu);
         break;
       case 3:
-        atualizarContato(contatos);
+        atualizarContato(exibirMenu, contatos);
         break;
       case 4:
         removerContato(exibirMenu, contatos);

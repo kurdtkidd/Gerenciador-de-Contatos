@@ -1,12 +1,12 @@
 const rl = require('./rl');
 const contatos = require('./contatos');
-const editarMais = require('./editarMais');
+const exibirMenu = require('./exibirMenu');
 
-function atualizarNome(i) {
+function atualizarNome(i, exibirMenu, editarMais, atualizarDetalhes) {
   rl.question("\nInforme o novo nome: ", (novoNome) => {
     contatos[i].nome = novoNome;
     console.log("\nNome atualizado com sucesso!");
-    editarMais(i);
+    editarMais(i, exibirMenu, atualizarDetalhes);
   });
 }
 

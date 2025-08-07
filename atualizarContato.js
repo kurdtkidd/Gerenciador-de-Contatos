@@ -1,10 +1,9 @@
 const rl = require('./rl');
 const contatos = require('./contatos');
 const listagemContatos = require('./listagemContatos');
-const atualizarDetalhes = require('./atualizarDetalhes')
-const exibirMenu = require("../exibirMenu");
+const atualizarDetalhes = require('./atualizarDetalhes');
 
-function atualizarContato(contatos) {
+function atualizarContato(exibirMenu, contatos) {
   listagemContatos(exibirMenu, contatos);
 
   rl.question(
@@ -14,10 +13,10 @@ function atualizarContato(contatos) {
 
       if (isNaN(i) || i < 0 || i >= contatos.length) {
         console.log("\nInforme um índice válido.");
-        return atualizarContato(contatos);
+        return atualizarContato(exibirMenu, contatos);
       }
 
-      atualizarDetalhes(i);
+      atualizarDetalhes(i, exibirMenu);
     }
   );
 }

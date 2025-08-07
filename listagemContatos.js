@@ -1,3 +1,5 @@
+const contatos = require('./contatos');
+
 function listagemContatos(exibirMenu, contatos) {
   if (contatos.length === 0) {
     console.log("\nNão há contatos cadastrados.");
